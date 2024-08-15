@@ -1,0 +1,31 @@
+
+	Para arrancar abrir una neuva terminal en vb code
+		Comandos
+			- git init  (Inicializa git)
+			- copiamos el comando del repositorio de git hub ylo pegamos en
+				la terminal en mi caso (git remote add origin https://github.com/beizae/DesarrolloSw-Beiza.git)
+
+			- git status (para ver si los archivos se han subido o no)
+			- git add . (prepara todos los archivos para lanzarlos a la nube)
+			- git commit -m "Version1" (GUARDA LOS CAMBIOS entre comillas va la descripcion de actualizacion)
+			- git push (con esto subimos todo a github) si es la primera ves tenes que usar
+				git push --set-upstream origin master
+			
+
+
+
+
+
+
+…or create a new repository on the command line
+echo "# DesarrolloSw-Beiza" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/beizae/DesarrolloSw-Beiza.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/beizae/DesarrolloSw-Beiza.git
+git branch -M main
+git push -u origin main
