@@ -6,126 +6,161 @@
     <title>Practico HTML - 2024</title>
 </head>
 <body>
-
-    <h1 id="Estructura">1- Estructura Básica del Documento HTML</h1>
-         Este documento HTML tiene una estructura basica que incluye
-        la declaracion de DOCTYPE, etiquetas de metadatos y un titulo
-    
-    <h1>2- Encabezados y propiedades del texto</h1>
-        <br><b>Este texto esta en negrita</b> </br>
-        <br> <em>Este texto esta en cursiva</em> </br>
-        <br><mark>Este texto esta resaltado</mark></br>
-        <br><p style="background-color: blue; color: azure;" >Este texto tiene estilo</p></br>
-
-    <h1>3 Divisiones y Agrupación de Contenido</h1>
-        <div>
-            <h5>Seccion 1</h5>
-            Contenido de la primera seccion agrupada en un div
-        </div>
-        <div><h5>Seccion 2</h5>
-            Contenido de la segunda seccion agrupada en un div
-        </div>
-
-
-        <h1>4 Enlaces y Listas</h1>
-        <div>Visita nuestro 
-            <a href="https://yahoo.com.ar" target="_blank">sitio web </a>
-             para mas información
-        </div>
-        <div>
-            <h5>Enlaces internos:</h5>
-            <br><a href="#Estructura">Ir a Estructura</a></br>
-            <br><a href="#Multimedia">Ir a Multimedia</a></br>
-            <br><a href="nuestro">Ir a Formulario</a></br>
-        </div>
-        <div>
-            <h5>Lista desordenada:</h5>
+       
+    <header>
+        <h1>Mi primera Web</h1>
+        <nav>
             <ul>
-                <li>1er item de la lista desordenada</li>
-                <li>2do item de la lista desordenada</li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#Nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
-        </div>
-        <div>
-            <h5>Lista ordenada:</h5>
-            <ol>
-                <li>1er elemento de la lista ordenada</li>
-                <li>2do elemento de la lista ordenada</li>
-            </ol>
-        </div>
+        </nav>
+    </header>
 
-        <div>
-            <h1 id="Multimedia">5 Elementos Multimedia</h1>
-                <table>
-                    <tr>
-                        <th>
-                            <h2>Video</h2>
-                        </th>
-                        <th>
-                            <h2>Imagen</h2>
-                        </th>
-                        <th>
-                            <h2>Audio</h2>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            
-                            <video width="300" height="200" controls>
-                              <source src="video.mp4" type="video/mp4">
-                             </video>
-                        </th>
 
-                        <th> 
-                            <img src="imagen.jpg" width="300" height="200">
-                        </th>
+    <main>
 
-                        <th>
-                             <audio controls>
-                              <source src="audio.mp3" type="audio/mp3">
-                            </audio>
-                        </th>
-                    </tr>
+        <section id="Estructura">
+                <h1>1- Estructura Básica del Documento HTML</h1>
+                Este documento HTML tiene una estructura basica que incluye
+                la declaracion de DOCTYPE, etiquetas de metadatos y un titulo
+        </section>
+
+        <section id="Encabezados">
+            <h1>2- Encabezados y propiedades del texto</h1>
+            <br><b>Este texto esta en negrita</b> 
+            <br> <em>Este texto esta en cursiva</em> 
+            <br><mark>Este texto esta resaltado</mark>
+            <br>Este es un <u>texto subrayado</u>
+            <br><p style="background-color: blue; color: azure;" >Este texto tiene estilo</p>
+        </section>
+
+        <section id="Divisiones">
+            <h1>3 Divisiones y Agrupación de Contenido</h1>
+            <div>
+                <h5>Seccion 1</h5>
+                Contenido de la primera seccion agrupada en un div
+            </div>
+            <div><h5>Seccion 2</h5>
+                Contenido de la segunda seccion agrupada en un div
+            </div>
+        </section>
+
+        
+        <section id="Enlaces">
+            <h1>4 Enlaces y Listas</h1>
+            <div>Visita nuestro 
+                <a href="https://yahoo.com.ar" target="_blank">sitio web </a>
+                para mas información
+            </div>
+            <div>
+                <h5>Enlaces internos:</h5>
+                <br><a href="#Estructura">Ir a Estructura</a>
+                <br><a href="#Multimedia">Ir a Multimedia</a>
+                <br><a href="#Formulario">Ir a Formulario</a>
+            </div>
+            <div>
+                <h5>Lista desordenada:</h5>
+                <ul>
+                    <li>1er item de la lista desordenada</li>
+                    <li>2do item de la lista desordenada</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Lista ordenada:</h5>
+                <ol>
+                    <li>1er elemento de la lista ordenada</li>
+                    <li>2do elemento de la lista ordenada</li>
+                </ol>
+            </div>
+        </section>
+        
+        <section id="Multimedia">
+            <div>
+                <h1>5 Elementos Multimedia</h1>
+                    <table>
+                        <tr>
+                            <th>
+                                <h2>Video</h2>
+                            </th>
+                            <th>
+                                <h2>Imagen</h2>
+                            </th>
+                            <th>
+                                <h2>Audio</h2>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                
+                                <video width="300" height="200" controls>
+                                <source src="video.mp4" type="video/mp4">
+                                </video>
+                            </th>
+
+                            <th> 
+                                <img src="imagen.jpg" width="300" height="200">
+                            </th>
+
+                            <th>
+                                <audio controls>
+                                <source src="audio.mp3" type="audio/mp3">
+                                </audio>
+                            </th>
+                        </tr>
+                    </table>
+            </div>
+        </section>
+
+        <section id="Tablas">
+            <div>
+                <h1>6 Tablas</h1>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Columna 1</th>
+                            <th>Columna 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dato 1</td>
+                            <td>Dato 2</td>
+                        </tr>
+                        <tr>
+                            <td>Dato 3</td>
+                            <td>Dato 4</td>
+                        </tr>
+                    </tbody>
                 </table>
-        </div>
+            </div>
+        </section>
 
-        <div>
-            <h1>6 Tablas</h1>
-            <table border="1">
-                <thead>
-                  <tr>
-                    <th>Columna 1</th>
-                    <th>Columna 2</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Dato 1</td>
-                    <td>Dato 2</td>
-                  </tr>
-                  <tr>
-                    <td>Dato 3</td>
-                    <td>Dato 4</td>
-                 </tr>
-                </tbody>
-              </table>
-        </div>
-        <div>
-            <h1>7 Formularios</h1>
+        <section id="Formulario">
+            <div>
+                <h1>7 Formularios</h1>
+                <form action="">
+                    <label>Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+        
+                    <label>Correo Electrónico:</label>
+                    <input type="email" id="email" name="email">
 
-            <form action="">
-              
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre">
-  
-              <label for="email">Correo Electrónico:</label>
-              <input type="email" id="email" name="email">
+                    <label>Mensaje:</label>
+                    <textarea id="mensaje"></textarea>
+                    
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
 
-              <label for="mensaje">Mensaje:</label>
-              <textarea id="mensaje" name="mensaje"></textarea>
-            
-              <input type="submit" value="Enviar">
-          
-            </form>
-        </div>
+        
+    </main>
+
+    <footer>
+        <br><br>
+        <p style="text-align: center;"> Todos los derechos reservados.</p>
+    </footer>   
 </body>
 </html>
