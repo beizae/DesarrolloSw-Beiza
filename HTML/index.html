@@ -22,18 +22,20 @@
     <main>
 
         <section id="Estructura">
-                <h1>1- Estructura Básica del Documento HTML</h1>
-                Este documento HTML tiene una estructura basica que incluye
-                la declaracion de DOCTYPE, etiquetas de metadatos y un titulo
+            <h1>1- Estructura Básica del Documento HTML</h1>
+            Este documento HTML tiene una estructura basica que incluye
+            la declaracion de DOCTYPE, etiquetas de metadatos y un titulo
         </section>
 
         <section id="Encabezados">
             <h1>2- Encabezados y propiedades del texto</h1>
-            <br><b>Este texto esta en negrita</b> 
-            <br> <em>Este texto esta en cursiva</em> 
-            <br><mark>Este texto esta resaltado</mark>
-            <br>Este es un <u>texto subrayado</u>
-            <br><p style="background-color: blue; color: azure;" >Este texto tiene estilo</p>
+            <p>
+                <br><b>Este texto esta en negrita</b> 
+                <br> <em>Este texto esta en cursiva</em> 
+                <br><mark>Este texto esta resaltado</mark>
+                <br><u>Este es un texto subrayado</u>
+                <br><span style="color: brown;">Este texto tiene estilo</span>
+            </p>
         </section>
 
         <section id="Divisiones">
@@ -50,7 +52,7 @@
         
         <section id="Enlaces">
             <h1>4 Enlaces y Listas</h1>
-            <div>Visita nuestro 
+            <div>Visita nuestro
                 <a href="https://yahoo.com.ar" target="_blank">sitio web </a>
                 para mas información
             </div>
@@ -79,37 +81,37 @@
         <section id="Multimedia">
             <div>
                 <h1>5 Elementos Multimedia</h1>
-                    <table>
-                        <tr>
-                            <th>
-                                <h2>Video</h2>
-                            </th>
-                            <th>
-                                <h2>Imagen</h2>
-                            </th>
-                            <th>
-                                <h2>Audio</h2>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                
-                                <video width="300" height="200" controls>
-                                <source src="video.mp4" type="video/mp4">
-                                </video>
-                            </th>
-
-                            <th> 
-                                <img src="imagen.jpg" width="300" height="200">
-                            </th>
-
-                            <th>
-                                <audio controls>
-                                <source src="audio.mp3" type="audio/mp3">
-                                </audio>
-                            </th>
-                        </tr>
-                    </table>
+                <table>
+                    <tr>
+                        <th>
+                            <h2>Video</h2>
+                        </th>
+                        <th>
+                            <h2>Imagen</h2>
+                        </th>
+                        <th>
+                            <h2>Audio</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                
+                            <video width="300" height="200" controls>
+                                <source src="resources/video.mp4" type="video/mp4">
+                            </video>
+                        </th>
+                
+                        <th>
+                            <img src="resources/imagen.jpg" width="300" height="200">
+                        </th>
+                
+                        <th>
+                            <audio controls>
+                                <source src="resources/audio.mp3" type="audio/mp3">
+                            </audio>
+                        </th>
+                    </tr>
+                </table>
             </div>
         </section>
 
@@ -140,7 +142,7 @@
         <section id="Formulario">
             <div>
                 <h1>7 Formularios</h1>
-                <form action="">
+                <form action="POST">
                     <label>Nombre:</label>
                     <input type="text" id="nombre" name="nombre">
         
@@ -154,8 +156,6 @@
                 </form>
             </div>
         </section>
-
-        
     </main>
 
     <footer>
