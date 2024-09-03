@@ -1,0 +1,159 @@
+/*------------------------- 4.1-----------------*/
+#blockquote1 {
+    font-size: larger;
+    text-align: center;
+    text-transform: inherit;
+    text-decoration: double;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+/*---------------------------- 4.2------------*/
+/*
+1px
+1rem = 16px
+vh = alto de la pagina
+vw = ancho de la pagina
+*/
+
+#blockquote2 {
+    text-align: center;
+
+}
+.titulo1 {
+    font-size: 24px; 
+    font-weight: bold; 
+}
+.linea-divisoria {
+    border-bottom: 1.5px solid #1d1d1d;
+    margin-bottom: 10px; 
+}
+.texto1 {
+    text-align: justify; 
+    font-size: 16px; 
+    color: #666; 
+    text-decoration: underline;
+}
+  
+.cita1 {
+    font-style: italic; 
+    color: #888; 
+    text-indent: 2em; 
+    padding: 10px 0;
+    background-color: rgb(233, 233, 233);
+}
+/*--------------------- 4.3----------------------------*/
+.caja1 {
+    padding: 10px; 
+    margin: 20px;
+    border: 1px double #000000; 
+    box-shadow: 5px 4px 10px 2px rgba(0, 0, 0, 0.2); 
+    background-color: #f0f0f0; 
+    border-radius: 0.4rem;
+}
+.caja2 {
+    padding: 10px;
+    margin: 20px;
+    border-width: 3px; 
+    border: 1px double #000000; 
+    box-shadow: 5px 4px 10px 2px rgba(0, 0, 0, 0.2); 
+    background-color: #fde4b4; 
+    border-radius: 0.4rem;
+}
+
+/*--------------------------- 4.4-----------------------------*/
+.cajarelativa {
+    padding: 10px;
+    background-color: #bee5ff; 
+    font-size: 11px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 50px;
+}
+.cajaabsoluta {
+    padding: 10px;
+    background-color: #038bad; 
+    color: #fff;
+    font-size: 11px;
+    top: 10px;
+    right: 2px;
+    position: absolute;
+}
+/*--------------------- 4.5 esta al final -------------*/
+
+/*-------------------4.6 ---------------------------*/
+.grid-container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    background-color: #ffffff;
+    gap: 20px;
+  }
+  
+  .grid-item {
+    background-color: #7c59fa;
+    padding: 10px;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.4rem;
+  }
+
+/*------------------------- 4.7*/
+.animacion {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: background-color 0.5s ease;
+  }
+  
+  .animacion:hover {
+    background-color: blue;
+  }
+  
+  .mover {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: green;
+    animation: mover 2s infinite linear;
+  }
+  
+  @keyframes mover {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(150%);
+    }
+  }
+
+
+  /*------------------------ 4.5 --------------------*/
+.box1{
+    background-color: #fff;
+
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #dfb7ff;
+        font-size: 10px;
+      }
+    .titulo1 {
+        font-size: 20px;
+    }
+    .texto1 {
+        font-size: 12px;
+    }
+    .cajaabsoluta{
+        font-size: 8px;
+        top: 100%;
+        right: 2px;
+    }
+    .cajarelativa{
+        font-size: 8px;
+        
+    }
+}
