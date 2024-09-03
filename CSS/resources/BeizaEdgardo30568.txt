@@ -1,0 +1,11 @@
+	Trabajo Clase Asincronica N°2 - CSS
+	Alumno: Edgardo Beiza
+	Legajo: 30568
+	
+	
+	Repositorio Github: https://github.com/beizae/DesarrolloSw-Beiza/tree/master/CSS
+	
+	- Trabajo Clase Asincronica N°2 - CSS - Dentro de la carpeta CSS se encuentra 
+	el archivo index.html que contiene el codigo html y un archivo style.css para cumplir 
+	con las consignas de la clase asincronica, dentro de la carpeta CSS tambien hay una carpeta
+	llamada resources que contiene archivos de las consignas solicitadas.
