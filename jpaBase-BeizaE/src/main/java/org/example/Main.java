@@ -21,20 +21,25 @@ public class Main {
 
 
             //Creamos la factura
-            Factura fact1 = new Factura();
-            fact1.setNumero(12);
-            fact1.setFecha("04/09/2024");
+            Factura fact1 = Factura.builder()
+                    .numero(12)
+                    .fecha("04/09/2024")
+                    .build();
+
 
             // creamos el cliente
-            Cliente cliente1 = new Cliente();
-            cliente1.setApellido("Beiza");
-            cliente1.setDni(33785422);
-            cliente1.setNombre("Edgardo");
+            Cliente cliente1 = Cliente.builder()
+                .apellido("Beiza")
+                .dni(33785422)
+                .nombre("Edgardo")
+                .build();
 
             //creamos el domicilio
-            Domicilio domicilio1 = new Domicilio();
-            domicilio1.setNumero(522);
-            domicilio1.setNombreCalle("Alta Gracia");
+            Domicilio domicilio1 = Domicilio.builder()
+                    .numero(522)
+                    .nombreCalle("Alta Gracia")
+                    .build();
+
 
             //Asignamos el domicilio al cliente (bidireccional)
             cliente1.setDomicilio(domicilio1);
@@ -43,34 +48,41 @@ public class Main {
             fact1.setCliente(cliente1);
 
             // Creamos las categorias
-            Categoria alimperecederos = new Categoria();
-            alimperecederos.setDenominacion("Alim Perecederos");
-            Categoria lacteos = new Categoria();
-            lacteos.setDenominacion("Lacteos");
-            Categoria limpieza = new Categoria();
-            limpieza.setDenominacion("Limpieza");
+            Categoria alimperecederos = Categoria.builder()
+                    .denominacion("Alim Perecederos")
+                    .build();
+            Categoria lacteos = Categoria.builder()
+                    .denominacion("Lacteos")
+                    .build();
+            Categoria limpieza = Categoria.builder()
+                    .denominacion("Limpieza")
+                    .build();
 
             // Creamos articulos
-            Articulo art1 = new Articulo();
-            Articulo art2 = new Articulo();
-            Articulo art3 = new Articulo();
-
-            //Art 1
-            art1.setCantidad(5);
-            art1.setDenominacion("Leche larga vida 1lt");
-            art1.setPrecio(20);
+            //art 1
+            Articulo art1 = Articulo.builder()
+                    .cantidad(5)
+                    .denominacion("Leche larga vida 1lt")
+                    .precio(20)
+                    .build();
             art1.getCategorias().add(lacteos);
 
             //Art 2
-            art2.setCantidad(10);
-            art2.setDenominacion("Cif crema");
-            art2.setPrecio(350);
+            Articulo art2 = Articulo.builder()
+                    .cantidad(10)
+                    .denominacion("Cif crema")
+                    .precio(350)
+                    .build();
             art2.getCategorias().add(limpieza);
 
+
             //Art 3
-            art3.setCantidad(8);
-            art3.setDenominacion("Harina trigo 0000");
-            art3.setPrecio(1500);
+            Articulo art3 = Articulo.builder()
+                    .cantidad(8)
+                    .denominacion("Harina trigo 0000")
+                    .precio(1500)
+                    .build();
+
             art3.getCategorias().add(alimperecederos);
 
             // Ahora a las categorias le asignamos los articulos
@@ -79,34 +91,35 @@ public class Main {
             alimperecederos.getArticulos().add(art3);
 
             //Creamos el detalle de factura
-            DetalleFactura detallefac = new DetalleFactura();
-            detallefac.setCantidad(2);
-            detallefac.setArticulo(art1);
+            DetalleFactura detallefac = DetalleFactura.builder()
+                    .cantidad(2)
+                    .articulo(art1)
+                    .build();
             detallefac.setSubtotal(detallefac.getCantidad()*detallefac.getArticulo().getPrecio());
 
             art1.getDetalle().add(detallefac);
             detallefac.setFactura(fact1);
 
             //Creamos otro detalle de factura
-            DetalleFactura detallefac2 = new DetalleFactura();
-            detallefac2.setCantidad(5);
-            detallefac2.setArticulo(art2);
+            DetalleFactura detallefac2 = DetalleFactura.builder()
+                    .cantidad(5)
+                    .articulo(art2)
+                    .build();
             detallefac2.setSubtotal(detallefac2.getCantidad()*detallefac2.getArticulo().getPrecio());
 
             art1.getDetalle().add(detallefac2);
             detallefac2.setFactura(fact1);
 
             //Creamos otro detalle de factura
-            DetalleFactura detallefac3 = new DetalleFactura();
-            detallefac3.setCantidad(3);
-            detallefac3.setArticulo(art3);
+            DetalleFactura detallefac3 = DetalleFactura.builder()
+                    .cantidad(3)
+                    .articulo(art3)
+                    .build();
             detallefac3.setSubtotal(detallefac3.getCantidad()*detallefac3.getArticulo().getPrecio());
 
             art1.getDetalle().add(detallefac3);
             detallefac3.setFactura(fact1);
 
-
-            //le pasamos el detalle a la factura
             fact1.getFacturas().add(detallefac);
             fact1.getFacturas().add(detallefac2);
             fact1.getFacturas().add(detallefac3);
@@ -114,9 +127,13 @@ public class Main {
             // sumamos los subtotales y se lo asignamos al total de la factura
             fact1.setTotal(detallefac.getSubtotal()+detallefac2.getSubtotal()+detallefac3.getSubtotal());
 
+
+
+
             entityManager.persist(fact1);
             entityManager.persist(art1);
             entityManager.getTransaction().commit();
+
 
 
         }catch (Exception e){
